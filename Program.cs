@@ -36,6 +36,8 @@ app.UseCors("Policy");
 if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
+
+    app.UseHttpsRedirection();
     // app.UseSwaggerUI(options => {
     //     options.RoutePrefix = "";
     //     options.SwaggerEndpoint("/openapi/v1.json", "My WebAPI");
